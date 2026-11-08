@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Task Dashboard</h1>
+    <p class="subtitle">Simple JavaScript task management with filtering and validation.</p>
+
+    <form id="task-form" novalidate>
+      <label>
+        Task
+        <input id="task-name" type="text" maxlength="80" placeholder="Enter a task">
+      </label>
+
+      <label>
+        Priority
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+      </label>
+
+      <button type="submit">Add task</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <div class="toolbar">
+      <label>
+        Filter
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="open">Open</option>
+          <option value="done">Completed</option>
+        </select>
+      </label>
+
+      <span id="summary"></span>
+    </div>
+
+    <ul id="task-list"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
