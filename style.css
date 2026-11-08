@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.container {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.subtitle {
+  margin-top: -8px;
+  color: #666;
+}
+
+form,
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+form label:first-child {
+  flex: 1;
+  min-width: 240px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 9px 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#message {
+  min-height: 20px;
+  color: #a40000;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-item.done .task-name {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-name {
+  flex: 1;
+}
+
+.priority {
+  font-size: 0.82rem;
+  font-weight: bold;
+}
+
+.remove-button {
+  padding: 6px 9px;
+}
+
+#summary {
+  margin-left: auto;
+  color: #555;
+}
